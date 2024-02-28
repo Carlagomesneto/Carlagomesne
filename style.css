@@ -15,7 +15,7 @@ body {
 }
 
 .nome-curriculo {
-    font-family: "Anta".
+    font-family: "Anta";
     font-size: 3rem;
     margin: 2rem 1rem 3rem 4rem; /* shorthand para margin-top margin-right
     margin-bottom margin-left*/
@@ -42,4 +42,18 @@ section#expreinciaProfissonal {
     font-size: 2rem;
     margin: 1rem; /*valores: cima direita baixo esquerda */
     padding: 1rem; /*valores: cima direita baixo esquerda */
+    text-shadow: 1px 1px 2px dimgray;
+}
+
+p {
+    line-height: 1.5; /* altura da linha: 1.5x p tamanho padrão */
+    margin: 1rem 0; /*valores: cima- baixo esquerda-direita */
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px dimgray; /*deslocamentoX deslocamnentoY espalhamentoY */
 }
