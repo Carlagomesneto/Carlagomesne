@@ -27,23 +27,32 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: block;/* faz com que os elementos se compotem como "blocos cheios, ocupado
+	100% da largura disponível do elemento pai */
+	/* Algns elementos tem disolay: inline (a, img, spam) */
+
 }
 body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: none; /* estilo da lista (marcadores): nenhum*/
 }
 blockquote, q {
-	quotes: none;
+	quotes: none; /* marcas de citação: nenhum */
 }
+/* : -> pseudo-classe
+blockquote:before -> antes do elemeto blockquote
+blockquote::after -> depois do elemento blockquote
+existem miutas pseud-classes*/
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	content: none; 
+}	
+table{ 
+
+	border-collapse: collapse; /*determina se as bordas da tabela serão 
+	individualizadas (separate) ou comparthadas (collapse) */
+	border-spacing: 0; /* espaçamento entre as bordas: 0 */
 }
