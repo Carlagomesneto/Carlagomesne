@@ -23,12 +23,16 @@ Exemplo: line - height, aspect-ratio, font- weight */
 :root { /* root -> elemento raiz (html). mais alta hierarquia */
     font-size: 16px; /* tamanho base do rem -> 1rem  = 16px*/
     scroll-behavior: smooth; /*comportamento da rolagem: suave */
+    --cor-primeira-texto: #353535;
 }
 
 body {
-    width: 80vw; /*90vw: 90% da viewport width */
-    margin: auto; /* margem com ajuste automático */
-    font-size: 20px; /* o padrão é 16px */
+    width: 80vw;
+     /*90vw: 90% da viewport width */
+    margin: auto;
+     /* margem com ajuste automático */
+    font-size: 20px;
+     /* o padrão é 16px */
     font-family: "DM Sans", sans-serif;
     font-weight: 200;
 }
@@ -46,7 +50,7 @@ section {
 }
 
 #apresentacao {
-    background-color: rgb(46, 223, 88);
+    background-color: rgb(227, 165, 223);
 
 }
 
@@ -62,23 +66,33 @@ section {
 
 #hardSkills {
     background-color: rgb(135, 178, 216);
+
 }
 
 #softSkills {
     background-color: #d45cca;
+    
 }
 #idiomas {
-    background-color: #6a96c9;
-
+    background-color: #7aa0cc;
+    
 }
 
+#apresentacao, 
+#formacaoAcademia, 
+#expreinciaProfissional, 
+#hardSkills, 
+#softSkills, 
+#idiomas {
+    padding: 40px;
+}
 /* @TODO
-    1. estlizar as demais seções
-    2. estilizar elementos article
-    3. tirar as sombras de texto
+    1. estlizar as demais seções - OK
+    2. estilizar elementos article - OK
+    3. tirar as sombras de texto - OK
     */
     
-#tecnologias{
+#tecnologias {
     display: flex; /* exibe como caixa flexível (Flexbox)*/
     /* Flexbox tem várias propriedade quem trabalham junro*/
     justify-content: center;/* alinha o conteúdo no eixo principal */
@@ -109,16 +123,22 @@ article h2 { /* h2 descendente de article */
 .data {
     font-style: oblique;
 }
-.continue-lendo {
-    background-color: #483d48;
+.continue-lendo a{
+    background-color: #a781d6;
     padding: .5rem 1rem;
     margin-top: 1rem;
     border-radius: 8px;
-}
-
-.continue-lendo a {
     color: #ffffff;
     text-decoration: none;
+}
+
+.continue-lendo a{
+    background-color: #a781d6 ;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 8px ;
+    color:#ffffff
 
 }
 
@@ -126,10 +146,15 @@ article h2 { /* h2 descendente de article */
 article p {
     text-align: justify;
     margin-bottom: 1rem;
+    height: 150px;
+    overflow: hidden; /*transbordamento : escondido */
 }
 
 article {
-    width: 30%; /*30% do pai (section id= "tecnologias") */
+    width: 30%; 
+    /*30% do pai (section id= "tecnologias") */
+    background-color: #cecece;
+    padding: 2rem;
 }
 
 .titulo-secao {
@@ -153,4 +178,13 @@ h3{
     text-transform: uppercase;
     margin: 1rem 0;
     text-shadow: 1px 1px 2px dimgray; /*deslocamentoX deslocamnentoY espalhamentoY */
+}
+
+.lista-tags li {
+    display: inline-block;
+    background-color: #cecece;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 5px;
+    color: #353535;
 }
