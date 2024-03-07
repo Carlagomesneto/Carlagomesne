@@ -24,7 +24,37 @@ Exemplo: line - height, aspect-ratio, font- weight */
     font-size: 16px; /* tamanho base do rem -> 1rem  = 16px*/
     scroll-behavior: smooth; /*comportamento da rolagem: suave */
     --cor-primeira-texto: #353535;
+    --cor-fundo-tags:#bebebe;
+    --padding-padrao-secao:40px;
+
+    /* TEMA: light */
+    --plano-fundo:#ffffff;
+    --cor-primeira-texto: #bc3d7a;
+    --cor-fundo-tags:#bebebe;
+
+} 
+
+[data-tema="light"] {
+    --plano-fundo:#ffffff;
+    --cor-primeira-texto:#4da5c7;
+    --cor-fundo-tags:#bebebe;
+    --cor-fundo-apresentacao:#ecb3b3;
+    --cor-fundo-formacaoAcademica:#cdf0cd;
+    --cor-fundo-experiencialProfissional:#fff2e3;
 }
+
+
+
+[data-tema="dark"] {
+    --plano-fundo:#353535;
+    --cor-primeira-texto:#ffffff;
+    --cor-fundo-tags:#3f5b72;
+    --cor-fundo-apresentacao:#9f3478;
+    --cor-fundo-formacaoAcademica:#036d03;
+    --cor-fundo-experiencialProfissonal:#e67f09;
+
+}
+
 
 body {
     width: 80vw;
@@ -35,28 +65,37 @@ body {
      /* o padrão é 16px */
     font-family: "DM Sans", sans-serif;
     font-weight: 200;
+    background-color: var(--plano-fundo);
 }
 
 .nome-curriculo {
-    font-family: "Anta";
+    font-family: "Anta", sans-serif;
     font-size: 3rem;
-    margin: 2rem 1rem 3rem 4rem; /* shorthand para margin-top margin-right
-    margin-bottom margin-left*/
+    margin: 2rem 1rem 3rem 4rem;
+    color: var(--cor-primeira-texto);
+     /* shorthand para margin-top margin-right margin-bottom 
+     margin-left*/
 
 }
 
 section {
-    padding: 40px; /* preenchimento [interno] */
+    padding: 40px;
+     /* preenchimento [interno] */
+}
+
+section p {
+    color: var(--cor-primeira-texto);
+
 }
 
 #apresentacao {
-    background-color: rgb(227, 165, 223);
+    background-color: var(--cor-fundo-apresentacao)
 
 }
 
 
 #formacaoAcademia {
-    background-color: aquamarine
+    background-color: rgb(71, 142, 218);
     ;
 }
 #expreinciaProfissonal {
@@ -84,7 +123,8 @@ section {
 #hardSkills, 
 #softSkills, 
 #idiomas {
-    padding: 40px;
+    margin: 5rem 0;
+    padding: var(--padding-padrao-secao);
 }
 /* @TODO
     1. estlizar as demais seções - OK
@@ -128,7 +168,7 @@ article h2 { /* h2 descendente de article */
     padding: .5rem 1rem;
     margin-top: 1rem;
     border-radius: 8px;
-    color: #ffffff;
+    color: #cac3c3;
     text-decoration: none;
 }
 
@@ -160,11 +200,11 @@ article {
 .titulo-secao {
     text-transform: uppercase; /*transforma o texto em maiúscila*/
     font-family: "Anta", sans-serif;
-    color: dimgray;
+    color: rgb(174, 240, 68);
     font-size: 2rem;
     margin: 1rem; /*valores: cima direita baixo esquerda */
     padding: 1rem; /*valores: cima direita baixo esquerda */
-    text-shadow: 1px 1px 2px dimgray;
+    text-shadow: 1px 1px 2px rgb(234, 155, 64);
 }
 
 p {
@@ -177,7 +217,8 @@ h3{
     font-weight: 300;
     text-transform: uppercase;
     margin: 1rem 0;
-    text-shadow: 1px 1px 2px dimgray; /*deslocamentoX deslocamnentoY espalhamentoY */
+    text-shadow: 1px 1px 2px rgb(234, 155, 64)
+    ; /*deslocamentoX deslocamnentoY espalhamentoY */
 }
 
 .lista-tags li {
